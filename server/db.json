@@ -1,0 +1,9 @@
+{
+	"persons": [
+		{
+			"id": 0,
+			"firstName": "John",
+			"lastName": "String"
+		}
+	]
+}
