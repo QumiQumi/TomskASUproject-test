@@ -2,6 +2,8 @@ import { environment } from './../environments/environment';
 import { Person } from './entity/person';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
 	selector: 'app-root',
@@ -10,7 +12,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'Persons';
-
+	faEdit = faEdit;
+	faTrash = faTrash;
 	persons: Array<Person> | any;
 	constructor(private http: HttpClient) {
 		this.getPerson();

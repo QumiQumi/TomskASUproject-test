@@ -1,3 +1,25 @@
 <router-outlet>
-	{{persons[0].firstName}}
+	<div class="wrapper">
+		<div class="content">
+			<div class="table">
+				<div class="table__row-header">
+					<div class="table__cell-header">Имя</div>
+					<div class="table__cell-header">Фамилия</div>
+				</div>
+				<div class="table__row" *ngFor="let person of persons">
+					<div class="table__cell-title">Имя</div>
+					<div class="table__cell">{{person.firstName}}</div>
+					<div class="table__cell-title">Фамилия</div>
+					<div class="table__cell">{{person.lastName}}</div>
+					<div class="table__cell-title">Редактировать/Удалить</div>
+					<div class="table__cell-tools">
+						<fa-icon [icon]="faEdit" class="table__cell-icon"></fa-icon>
+						<fa-icon [icon]="faTrash" class="table__cell-icon"></fa-icon>
+					</div>
+				</div>
+			</div>
+			<input type="button" value="Добавить сотрудника" class="button">
+		</div>
+	</div>
+
 </router-outlet>
