@@ -1,9 +1,14 @@
 {
-	"persons": [
-		{
-			"id": 0,
-			"firstName": "John",
-			"lastName": "String"
-		}
-	]
+  "persons": [
+    {
+      "id": 0,
+      "firstName": "John",
+      "lastName": "String"
+    },
+    {
+      "firstName": "Человек",
+      "lastName": "Челкин",
+      "id": 1
+    }
+  ]
 }

@@ -13,12 +13,12 @@
 					<div class="table__cell">{{person.lastName}}</div>
 					<div class="table__cell-title">Редактировать/Удалить</div>
 					<div class="table__cell-tools">
-						<fa-icon [icon]="faEdit" class="table__cell-icon"></fa-icon>
-						<fa-icon [icon]="faTrash" class="table__cell-icon"></fa-icon>
+						<fa-icon [icon]="faEdit" (click)="editPerson(person)" class="table__cell-icon"></fa-icon>
+						<fa-icon [icon]="faTrash" (click)="deletePerson(person)" class="table__cell-icon"></fa-icon>
 					</div>
 				</div>
 			</div>
-			<input type="button" value="Добавить сотрудника" class="button">
+			<button class="button" mat-button (click)="addPerson()">Добавить сотрудника</button>
 		</div>
 	</div>
 

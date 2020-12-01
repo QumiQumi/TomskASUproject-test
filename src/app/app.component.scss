@@ -1,4 +1,4 @@
-$grey-20: rgba(0, 0, 0, 0.2);
+$grey-20: rgba(0, 0, 0, 0.103);
 $grey-30: rgba(0, 0, 0, 0.3);
 $grey-40: rgb(139, 135, 135);
 $grey: rgb(66, 66, 66);
@@ -100,6 +100,10 @@ $white: #ffffff;
   }
   &__cell-icon {
     margin-right: 15px;
+    &:hover {
+      color: $grey;
+      cursor: pointer;
+    }
   }
   &__cell:hover {
     background-color: $beige !important;
@@ -110,25 +114,9 @@ $white: #ffffff;
 }
 .button {
   margin-top: 20px;
-  width: max-content;
-  padding: 10px;
   border-radius: 5px;
-  border-width: 0px;
-
-  background-color: $grey-30;
-  outline: none;
-  box-shadow: 0 4px 8px 0 $grey-40;
-  color: $white;
-
-  &:focus {
-    background-color: $grey-40;
-  }
-  &:active {
-    background-color: $grey-20;
-  }
-  &:hover {
-    cursor: pointer;
-  }
+  width: max-content;
+  background-color: $grey-20;
 }
 
 @media screen and (max-width: 421px) {
