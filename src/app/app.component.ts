@@ -1,5 +1,5 @@
+import { PersonModalComponent } from './person-modal/person-modal.component';
 import { PersonService } from './person.service';
-import { AddPersonComponent } from './add-person/add-person.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Person } from './entity/person';
 import { Component, OnInit } from '@angular/core';
@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 	faEdit = faEdit;
 	faTrash = faTrash;
 	isNewPerson = true;
-
+	// editedPerson = new Person();
 	persons: Array<Person> | any;
 	statusMessage = "";
 	constructor(private serv: PersonService, public dialog: MatDialog) {
@@ -55,21 +55,22 @@ export class AppComponent implements OnInit {
 		});
 	}
 	openDialog(person: Person = new Person()): void {
-		const dialogRef = this.dialog.open(AddPersonComponent, {
+		const dialogRef = this.dialog.open(PersonModalComponent, {
+
 			width: '250px',
-			data: { firstName: person.firstName, lastName: person.lastName }
+			data: { person: { id: person.id, firstName: person.firstName, lastName: person.lastName }, isNewPerson: this.isNewPerson, }
 		});
 		dialogRef.afterClosed().subscribe(res => {
 
 			if (res) {
 				if (this.isNewPerson) {
-					this.serv.createPerson(res).subscribe(data => {
+					this.serv.createPerson(res.person).subscribe(data => {
 						this.statusMessage = 'Данные успешно добавлены',
 							this.loadPersons();
 					});
 				}
 				else {
-					this.serv.updatePerson({ id: person.id, firstName: res.firstName, lastName: res.lastName }).subscribe(data => {
+					this.serv.updatePerson(res.person).subscribe(data => {
 						this.statusMessage = 'Данные успешно обновлены',
 							this.loadPersons();
 					});

@@ -10,13 +10,15 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { AddPersonComponent } from './add-person/add-person.component';
 import { FormsModule } from '@angular/forms';
+import { PersonModalComponent } from './person-modal/person-modal.component';
+import { PersonsComponent } from './persons/persons.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		AddPersonComponent
+		PersonModalComponent,
+		PersonsComponent
 	],
 	imports: [
 		BrowserModule,
@@ -32,7 +34,7 @@ import { FormsModule } from '@angular/forms';
 
 	],
 
-	entryComponents: [AddPersonComponent],
+	entryComponents: [PersonModalComponent],
 	providers: [],
 	bootstrap: [AppComponent]
 })

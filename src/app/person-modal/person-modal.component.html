@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>
+	<span *ngIf="data.isNewPerson">Добавить сотрудника</span>
+	<span *ngIf="!data.isNewPerson">Редактировать сотрудника </span>
+</h1>
+<div mat-dialog-content>
+	<p *ngIf="!data.isNewPerson">{{data.person.firstName}} {{data.person.lastName}}</p>
+	<mat-form-field>
+		<mat-label>Имя</mat-label>
+		<input matInput [(ngModel)]="data.person.firstName">
+
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Фамилия</mat-label>
+		<input matInput [(ngModel)]="data.person.lastName">
+	</mat-form-field>
+</div>
+<div mat-dialog-actions>
+	<button mat-button (click)="onNoClick()">Отмена</button>
+	<button mat-button [mat-dialog-close]="data" cdkFocusInitial>
+		<span *ngIf="data.isNewPerson">Добавить</span>
+		<span *ngIf="!data.isNewPerson">Изменить</span>
+
+	</button>
+</div>
