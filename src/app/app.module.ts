@@ -16,28 +16,28 @@ import { PersonsComponent } from './persons/persons.component';
 import { ToastComponent } from './toast/toast.component';
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		PersonModalComponent,
-		PersonsComponent,
-		ToastComponent
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		HttpClientModule,
-		FontAwesomeModule,
-		BrowserAnimationsModule,
-		MatDialogModule,
-		MatButtonModule,
-		FormsModule,
-		MatFormFieldModule,
-		MatInputModule
+    declarations: [
+        AppComponent,
+        PersonModalComponent,
+        PersonsComponent,
+        ToastComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FontAwesomeModule,
+        BrowserAnimationsModule,
+        MatDialogModule,
+        MatButtonModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule
 
-	],
+    ],
 
-	entryComponents: [],
-	providers: [],
-	bootstrap: [AppComponent]
+    entryComponents: [],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
