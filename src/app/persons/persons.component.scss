@@ -113,10 +113,29 @@ $white: #ffffff;
   }
 }
 .button {
+  display: block;
   margin-top: 20px;
   border-radius: 5px;
   width: max-content;
   background-color: $grey-20;
+}
+.button-mobile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: #ffffff;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 1;
+  outline: none;
 }
 
 @media screen and (max-width: 421px) {
@@ -142,5 +161,11 @@ $white: #ffffff;
       margin-bottom: 30px;
       box-shadow: 0 4px 8px 0 $grey-40;
     }
+  }
+  .button {
+    display: none;
+  }
+  .button-mobile {
+    display: flex;
   }
 }

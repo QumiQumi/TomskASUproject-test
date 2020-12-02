@@ -5,6 +5,7 @@ import { Person } from '../entity/person';
 import { Component, OnInit } from '@angular/core';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 @Component({
 	selector: 'app-persons',
 	templateUrl: './persons.component.html',
@@ -17,6 +18,7 @@ export class PersonsComponent implements OnInit {
 	title = 'Persons';
 	faEdit = faEdit;
 	faTrash = faTrash;
+	faPlus = faPlus;
 	isNewPerson = true;
 	// editedPerson = new Person();
 	persons: Array<Person> | any;

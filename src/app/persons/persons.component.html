@@ -18,6 +18,9 @@
 			</div>
 		</div>
 		<button class="button" mat-button (click)="addPerson()">Добавить сотрудника</button>
+		<button class="button-mobile" (click)="addPerson()">
+			<fa-icon [icon]="faPlus"></fa-icon>
+		</button>
 	</div>
 	<app-toast [status]="status"></app-toast>
 </div>
