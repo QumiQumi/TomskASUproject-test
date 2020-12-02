@@ -13,12 +13,14 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { PersonModalComponent } from './person-modal/person-modal.component';
 import { PersonsComponent } from './persons/persons.component';
+import { ToastComponent } from './toast/toast.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		PersonModalComponent,
-		PersonsComponent
+		PersonsComponent,
+		ToastComponent
 	],
 	imports: [
 		BrowserModule,
@@ -34,7 +36,7 @@ import { PersonsComponent } from './persons/persons.component';
 
 	],
 
-	entryComponents: [PersonModalComponent],
+	entryComponents: [],
 	providers: [],
 	bootstrap: [AppComponent]
 })
