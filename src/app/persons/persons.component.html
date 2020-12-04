@@ -1,19 +1,22 @@
 <div class="wrapper">
 	<div class="content">
 		<div class="table">
-			<div class="table__row-header">
-				<div class="table__cell-header">Имя</div>
-				<div class="table__cell-header">Фамилия</div>
+			<div class="table__row table__row-header">
+				<div class="table__cell table__cell-header">Имя</div>
+				<div class="table__cell table__cell-header">Фамилия</div>
+				<div class="table__cell table__cell-header"></div>
 			</div>
 			<div class="table__row" *ngFor="let person of persons">
-				<div class="table__cell-title">Имя</div>
+				<div class="table__cell table__cell-title">Имя</div>
 				<div class="table__cell">{{person.firstName}}</div>
-				<div class="table__cell-title">Фамилия</div>
+				<div class="table__cell table__cell-title">Фамилия</div>
 				<div class="table__cell">{{person.lastName}}</div>
-				<div class="table__cell-title">Редактировать/Удалить</div>
-				<div class="table__cell-tools">
-					<fa-icon [icon]="faEdit" (click)="editPerson(person)" class="table__cell-icon"></fa-icon>
-					<fa-icon [icon]="faTrash" (click)="deletePerson(person)" class="table__cell-icon"></fa-icon>
+				<div class="table__cell table__cell-title">Редактировать/Удалить</div>
+				<div class="table__cell table__cell-tools">
+					<div>
+						<fa-icon [icon]="faEdit" (click)="editPerson(person)" class="table__cell-icon"></fa-icon>
+						<fa-icon [icon]="faTrash" (click)="deletePerson(person)" class="table__cell-icon"></fa-icon>
+					</div>
 				</div>
 			</div>
 		</div>
