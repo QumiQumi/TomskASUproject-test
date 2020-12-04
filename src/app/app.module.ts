@@ -10,34 +10,34 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PersonModalComponent } from './person-modal/person-modal.component';
 import { PersonsComponent } from './persons/persons.component';
 import { ToastComponent } from './toast/toast.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        PersonModalComponent,
-        PersonsComponent,
-        ToastComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        FontAwesomeModule,
-        BrowserAnimationsModule,
-        MatDialogModule,
-        MatButtonModule,
-        FormsModule,
-        MatFormFieldModule,
-        MatInputModule
+  declarations: [
+    AppComponent,
+    PersonModalComponent,
+    PersonsComponent,
+    ToastComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatButtonModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+  ],
 
-    ],
-
-    entryComponents: [],
-    providers: [],
-    bootstrap: [AppComponent]
+  entryComponents: [],
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
